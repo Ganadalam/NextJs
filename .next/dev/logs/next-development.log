@@ -1,0 +1,72 @@
+[00:00:01.151] Server  LOG     ✓ Ready in 992ms
+[00:02:48.431] Server  ERROR   ⨯ ./app/(movies)/movies/[id]/page.tsx
+Module parse failed: Duplicate export 'default' (11:7)
+|     }, this);
+| }
+> export default function MovieDetail({ params }) {
+|     return /*#__PURE__*/ _jsxDEV("h1", {
+|         children: [
+
+Import trace for requested module:
+./app/(movies)/movies/[id]/page.tsx
+[00:02:49.236] Browser ERROR   ./app/(movies)/movies/[id]/page.tsx
+Module parse failed: Duplicate export 'default' (11:7)
+|     }, this);
+| }
+> export default function MovieDetail({ params }) {
+|     return /*#__PURE__*/ _jsxDEV("h1", {
+|         children: [
+
+Import trace for requested module:
+./app/(movies)/movies/[id]/page.tsx
+[00:02:49.959] Server  ERROR   ⨯ ./app/(movies)/movies/[id]/page.tsx
+Module parse failed: Duplicate export 'default' (11:7)
+|     }, this);
+| }
+> export default function MovieDetail({ params }) {
+|     return /*#__PURE__*/ _jsxDEV("h1", {
+|         children: [
+
+Import trace for requested module:
+./app/(movies)/movies/[id]/page.tsx
+[00:02:50.237] Browser ERROR   ./app/(movies)/movies/[id]/page.tsx
+Module parse failed: Duplicate export 'default' (11:7)
+|     }, this);
+| }
+> export default function MovieDetail({ params }) {
+|     return /*#__PURE__*/ _jsxDEV("h1", {
+|         children: [
+
+Import trace for requested module:
+./app/(movies)/movies/[id]/page.tsx
+[00:03:29.417] Server  ERROR   ⨯ Error: The default export is not a React Component in "/movies/[id]/page"
+[00:03:29.584] Server  ERROR   ⨯ Error: The default export is not a React Component in "/movies/[id]/page"
+[00:03:30.426] Server  ERROR   ⨯ Error: The default export is not a React Component in "/movies/[id]/page"
+[00:03:30.575] Server  ERROR   ⨯ Error: The default export is not a React Component in "/movies/[id]/page"
+[00:03:30.740] Server  ERROR   ⨯ Error: The default export is not a React Component in "/movies/[id]/page"
+[00:03:30.898] Server  ERROR   ⨯ Error: The default export is not a React Component in "/movies/[id]/page"
+[00:03:31.047] Server  ERROR   ⨯ Error: The default export is not a React Component in "/movies/[id]/page"
+[00:03:31.191] Server  ERROR   ⨯ Error: The default export is not a React Component in "/movies/[id]/page"
+[00:03:31.534] Browser ERROR   uncaughtError: Error: The default export is not a React Component in "/movies/[id]/page"
+[00:03:33.483] Server  ERROR   ⨯ ./app/(movies)/movies/[id]/page.tsx
+Module parse failed: Duplicate export 'default' (11:7)
+|     }, this);
+| }
+> export default function MovieDetail({ params }) {
+|     return /*#__PURE__*/ _jsxDEV("h1", {
+|         children: [
+
+Import trace for requested module:
+./app/(movies)/movies/[id]/page.tsx
+[00:03:34.235] Browser ERROR   ./app/(movies)/movies/[id]/page.tsx
+Module parse failed: Duplicate export 'default' (11:7)
+|     }, this);
+| }
+> export default function MovieDetail({ params }) {
+|     return /*#__PURE__*/ _jsxDEV("h1", {
+|         children: [
+
+Import trace for requested module:
+./app/(movies)/movies/[id]/page.tsx
+[00:07:08.328] Server  WARN    Error: Route "/movies/[id]" used `params.id`. `params` is a Promise and must be unwrapped with `await` or `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+[00:07:11.182] Server  WARN    Error: Route "/movies/[id]" used `params.id`. `params` is a Promise and must be unwrapped with `await` or `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
