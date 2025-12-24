@@ -1,9 +1,15 @@
 # dependencies
 /node_modules
+/.pnp
+.pnp.js
+.yarn/install-state.gz
+
+#testing 
+/coverage
 
 # next.js
-/.next
-/out
+/.next/
+/out/
 
 # env
 .env
@@ -17,5 +23,14 @@ pnpm-debug.log*
 # OS
 .DS_Store
 
+
 # editor
 .history
+
+# @
+/build
+*.pem
+.env*local
+.vercel
+*.tsbuildinfo
+next-env.d.ts
