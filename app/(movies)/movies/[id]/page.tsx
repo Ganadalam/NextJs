@@ -10,7 +10,6 @@ export default async function MovieDetail({
   const { id } = await params; // ⭐ 핵심
   return (
     <div>
-      <h3> Movie detail page</h3>
       <Suspense fallback={<h1>Loadiing movie info</h1>}>
         <MovieInfo id={id} />
       </Suspense>
