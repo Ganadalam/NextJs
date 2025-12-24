@@ -1,45 +1,64 @@
-export const metadata = {
-  title: "Home",
-};
+import { API_URL } from "../../../(home)/page";
 
-const URL = "https://nomad-movies.nomadcoders.workers.dev/movies";
-
-async function getMovies() {
-  await new Promise((resolve) => setTimeout(resolve, 10000));
-  const response = await fetch(URL);
-  const json = await response.json();
-  return json;
+async function getMovie(id: string) {
+  const res = await fetch(`${API_URL}/${id}`);
+  if (!res.ok) throw new Error("fetch failed");
+  return res.json();
 }
 
-export default async function HomePage() {
-  const movies = await getMovies();
-  return <div>{JSON.stringify(movies)}</div>;
+export default async function MovieDetail({
+  params,
+}: {
+  params: Promise<{ id: string }>;
+}) {
+  const { id } = await params; // ⭐ 핵심
+
+  const movie = await getMovie(id);
+  return <h1>{movie.title}</h1>;
 }
 
-// import { API_URL } from "../../../(home)/page";
+// export const metadata = {
+//   title: "Home",
+// };
 
-// async function getMovie(id: string) {
-//   console.log(`Fetching movies: ${Date.now()}`);
-//   await new Promise((resolve) => setTimeout(resolve, 5000));
-//   const response = await fetch(`${API_URL}/${id}`);
-//   return response.json();
+// const URL = "https://nomad-movies.nomadcoders.workers.dev/movies";
+
+// async function getMovies() {
+//   await new Promise((resolve) => setTimeout(resolve, 10000));
+//   const response = await fetch(URL);
+//   const json = await response.json();
+//   return json;
 // }
 
-// async function getVideos(id: string) {
-//   console.log(`Fetching videos: ${Date.now()}`);
-//   await new Promise((resolve) => setTimeout(resolve, 5000));
-//   const response = await fetch(`${API_URL}/${id}/videos`);
-//   return response.json();
+// export default async function HomePage() {
+//   const movies = await getMovies();
+//   return <div>{JSON.stringify(movies)}</div>;
 // }
 
-// export default async function MovieDetail({
-//   params: { id },
-// }: {
-//   params: { id: string };
-// }) {
-//   console.log("===========");
-//   console.log("start fetching");
-//   const [movie, videos] = await Promise.all([getMovie(id), getVideos(id)]);
-//   console.log("end fetching");
-//   return <h1>{movie.title}</h1>;
-// }
+// // import { API_URL } from "../../../(home)/page";
+
+// // async function getMovie(id: string) {
+// //   console.log(`Fetching movies: ${Date.now()}`);
+// //   await new Promise((resolve) => setTimeout(resolve, 5000));
+// //   const response = await fetch(`${API_URL}/${id}`);
+// //   return response.json();
+// // }
+
+// // async function getVideos(id: string) {
+// //   console.log(`Fetching videos: ${Date.now()}`);
+// //   await new Promise((resolve) => setTimeout(resolve, 5000));
+// //   const response = await fetch(`${API_URL}/${id}/videos`);
+// //   return response.json();
+// // }
+
+// // export default async function MovieDetail({
+// //   params: { id },
+// // }: {
+// //   params: { id: string };
+// // }) {
+// //   console.log("===========");
+// //   console.log("start fetching");
+// //   const [movie, videos] = await Promise.all([getMovie(id), getVideos(id)]);
+// //   console.log("end fetching");
+// //   return <h1>{movie.title}</h1>;
+// // }
