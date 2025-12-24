@@ -1,9 +1,17 @@
 import { API_URL } from "../../../(home)/page";
 
 async function getMovie(id: string) {
-  const res = await fetch(`${API_URL}/${id}`);
-  if (!res.ok) throw new Error("fetch failed");
-  return res.json();
+  console.log(`Fetching movies: ${Date.now()}`);
+  await new Promise((resolve) => setTimeout(resolve, 5000));
+  const response = await fetch(`${API_URL}/${id}`);
+  return response.json();
+}
+
+async function getVideos(id: string) {
+  console.log(`Fetching Videos: ${Date.now()}`);
+  await new Promise((resolve) => setTimeout(resolve, 5000));
+  const response = await fetch(`${API_URL}/${id}/videos`);
+  return response.json();
 }
 
 export default async function MovieDetail({
@@ -13,7 +21,10 @@ export default async function MovieDetail({
 }) {
   const { id } = await params; // ⭐ 핵심
 
+  console.log("st fetching");
   const movie = await getMovie(id);
+  const videos = await getVideos(id);
+  console.log("end fetching");
   return <h1>{movie.title}</h1>;
 }
 
