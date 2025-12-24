@@ -1,0 +1,10 @@
+/* styles/navigation.module.css */
+
+.nav {
+  background-color: red;
+  padding: 50px 100px;
+}
+
+.list {
+  display: flex;
+}
